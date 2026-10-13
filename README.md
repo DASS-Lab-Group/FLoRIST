@@ -5,6 +5,12 @@ Official implementation of **FLoRIST**, a federated fine-tuning framework that p
 📄 *Accepted to MLSys 2026*  
 This repository accompanies the camera-ready version of the paper.
 
+<p align="left">
+  <img src="figures/artifacts-available-v1.1.png" alt="ACM Artifacts Available v1.1" height="110">
+  <img src="figures/artifacts-functional-v1.1.png" alt="ACM Artifacts Evaluated – Functional v1.1" height="110">
+  <img src="figures/results-reproduced-v1.1.png" alt="ACM Results Reproduced v1.1" height="110">
+</p>
+
 ---
 
 ## Overview
