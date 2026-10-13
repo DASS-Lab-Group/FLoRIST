@@ -197,7 +197,7 @@ python main.py \
   --num_communication_rounds 75 \
   --local_num_epochs 3 \
   --method florist \
-  --threshold 0.85 \
+  --threshold 0.90 \
   --heter True
 ```
 
@@ -253,7 +253,7 @@ Across all evaluated settings, FLoRIST achieves the strongest overall accuracy�
 
 Representative findings include:
 
-* up to **349× less communication** than full fine-tuning
+* up to **400× less communication** than full fine-tuning
 * up to **108× higher efficiency** than FLoRA
 * ~7× lower server FLOPs than FlexLoRA
 * adaptive rank compression that varies across layers
@@ -264,15 +264,17 @@ Representative findings include:
 
 ## Communication Cost Example
 
-TinyLlama on Wizard (homogeneous):
+Communication cost (MB) of federated fine-tuning methods on TinyLlama using the Wizard dataset (homogeneous setting):
 
-| Method      | Download (MB) |
-| ----------- | ------------- |
-| Full FT     | 2076          |
-| FedIT       | 45            |
-| FLoRA       | 45            |
-| FFA         | 22            |
-| **FLoRIST** | **8.4**       |
+| Method                 | Upload (MB) | Download (MB) |
+| ---------------------- | ----------- | ------------- |
+| Full FT                | 2076.17     | 2076.17       |
+| FedIT                  | 45.05       | 45.05         |
+| FLoRA                  | 45.05       | 360.45        |
+| FlexLoRA               | 45.05       | 45.05         |
+| FFA-LoRA               | **22.52**   | 28.83         |
+| **FLoRIST** [τ\*]      | 45.05       | **5.95**      |
+| **FLoRIST** [τ=0.9]    | 45.05       | **5.15**      |
 
 ---
 
